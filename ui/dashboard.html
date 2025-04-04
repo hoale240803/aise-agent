@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aise - AI Software Engineering Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo.svg" alt="Aise Logo" class="logo">
+                <h1>Aise</h1>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="#dashboard">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#requirements">
+                        <i class="fas fa-tasks"></i>
+                        <span>Requirements</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#development">
+                        <i class="fas fa-code"></i>
+                        <span>Development</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#testing">
+                        <i class="fas fa-vial"></i>
+                        <span>Testing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#deployment">
+                        <i class="fas fa-rocket"></i>
+                        <span>Deployment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#monitoring">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Monitoring</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search projects, agents, or tasks...">
+                </div>
+                <div class="user-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="quick-action-btn">
+                        <i class="fas fa-plus"></i>
+                        New Project
+                    </button>
+                    <div class="user-profile">
+                        <img src="assets/avatar.png" alt="User Avatar">
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Project Overview -->
+                <section class="project-overview">
+                    <h2>Project Overview</h2>
+                    <div class="project-cards">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>E-commerce Platform</h3>
+                                <span class="status-badge active">Active</span>
+                            </div>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                                <span>65% Complete</span>
+                            </div>
+                            <div class="project-metrics">
+                                <div class="metric">
+                                    <i class="fas fa-code-branch"></i>
+                                    <span>12 PRs</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-bug"></i>
+                                    <span>3 Issues</span>
+                                </div>
+                                <div class="metric">
+                                    <i class="fas fa-clock"></i>
+                                    <span>2 Days Left</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More project cards... -->
+                    </div>
+                </section>
+
+                <!-- AI Insights -->
+                <section class="ai-insights">
+                    <h2>AI Insights</h2>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Optimization Suggestion</h3>
+                            <p>Consider implementing caching for the product catalog API to improve performance.</p>
+                            <button class="action-btn">View Details</button>
+                        </div>
+                        <div class="insight-card">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Risk Alert</h3>
+                            <p>High memory usage detected in the payment processing service.</p>
+                            <button class="action-btn">Investigate</button>
+                        </div>
+                        <!-- More insight cards... -->
+                    </div>
+                </section>
+
+                <!-- Quick Actions -->
+                <section class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="action-buttons">
+                        <button class="action-btn">
+                            <i class="fas fa-pause"></i>
+                            Pause Project
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-check"></i>
+                            Approve Deployment
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-edit"></i>
+                            Modify Requirements
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-sync"></i>
+                            Refresh Status
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <i class="fas fa-code-branch"></i>
+                            <div class="activity-content">
+                                <p>New pull request created for feature/user-authentication</p>
+                                <span class="timestamp">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-bug"></i>
+                            <div class="activity-content">
+                                <p>Issue #1234 resolved by AI agent</p>
+                                <span class="timestamp">4 hours ago</span>
+                            </div>
+                        </div>
+                        <!-- More activity items... -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

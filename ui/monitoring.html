@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aise - Agent Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="monitoring.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <!-- Sidebar Navigation (same as dashboard) -->
+        <nav class="sidebar">
+            <!-- ... existing sidebar content ... -->
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar (same as dashboard) -->
+            <header class="top-bar">
+                <!-- ... existing top bar content ... -->
+            </header>
+
+            <!-- Monitoring Content -->
+            <div class="monitoring-content">
+                <!-- Agent Status Overview -->
+                <section class="agent-status">
+                    <h2>Agent Status Overview</h2>
+                    <div class="status-grid">
+                        <div class="status-card">
+                            <div class="status-header">
+                                <i class="fas fa-user-tie"></i>
+                                <h3>Business Analyst</h3>
+                            </div>
+                            <div class="status-body">
+                                <div class="status-indicator active"></div>
+                                <span class="status-text">Active</span>
+                                <div class="agent-metrics">
+                                    <div class="metric">
+                                        <span class="label">Current Task</span>
+                                        <span class="value">Requirement Analysis</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="label">Task Progress</span>
+                                        <div class="progress-bar">
+                                            <div class="progress" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More agent status cards... -->
+                    </div>
+                </section>
+
+                <!-- Live Activity Feed -->
+                <section class="live-activity">
+                    <h2>Live Activity Feed</h2>
+                    <div class="activity-controls">
+                        <div class="filter-controls">
+                            <button class="filter-btn active">All</button>
+                            <button class="filter-btn">Errors</button>
+                            <button class="filter-btn">Warnings</button>
+                            <button class="filter-btn">Info</button>
+                        </div>
+                        <div class="search-controls">
+                            <input type="text" placeholder="Search logs...">
+                            <button class="clear-btn">Clear</button>
+                        </div>
+                    </div>
+                    <div class="activity-log">
+                        <div class="log-entry error">
+                            <span class="timestamp">10:23:45</span>
+                            <span class="agent">Developer</span>
+                            <span class="message">Failed to generate code for user authentication module</span>
+                            <button class="action-btn">Retry</button>
+                        </div>
+                        <div class="log-entry warning">
+                            <span class="timestamp">10:22:30</span>
+                            <span class="agent">Tester</span>
+                            <span class="message">High memory usage detected during performance testing</span>
+                            <button class="action-btn">Investigate</button>
+                        </div>
+                        <div class="log-entry info">
+                            <span class="timestamp">10:21:15</span>
+                            <span class="agent">Business Analyst</span>
+                            <span class="message">Completed requirement analysis for payment module</span>
+                            <button class="action-btn">Review</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Agent Control Panel -->
+                <section class="agent-control">
+                    <h2>Agent Control Panel</h2>
+                    <div class="control-grid">
+                        <div class="control-card">
+                            <h3>Business Analyst</h3>
+                            <div class="control-actions">
+                                <button class="control-btn pause">
+                                    <i class="fas fa-pause"></i>
+                                    Pause
+                                </button>
+                                <button class="control-btn resume">
+                                    <i class="fas fa-play"></i>
+                                    Resume
+                                </button>
+                                <button class="control-btn restart">
+                                    <i class="fas fa-sync"></i>
+                                    Restart
+                                </button>
+                            </div>
+                            <div class="control-settings">
+                                <h4>Settings</h4>
+                                <div class="setting-item">
+                                    <label>Processing Speed</label>
+                                    <select>
+                                        <option>Normal</option>
+                                        <option>Fast</option>
+                                        <option>Slow</option>
+                                    </select>
+                                </div>
+                                <div class="setting-item">
+                                    <label>Log Level</label>
+                                    <select>
+                                        <option>Debug</option>
+                                        <option>Info</option>
+                                        <option>Warning</option>
+                                        <option>Error</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More agent control cards... -->
+                    </div>
+                </section>
+
+                <!-- Performance Metrics -->
+                <section class="performance-metrics">
+                    <h2>Performance Metrics</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <h3>CPU Usage</h3>
+                            <div class="metric-chart">
+                                <!-- Placeholder for chart -->
+                                <canvas id="cpuChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Memory Usage</h3>
+                            <div class="metric-chart">
+                                <!-- Placeholder for chart -->
+                                <canvas id="memoryChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Task Queue</h3>
+                            <div class="queue-status">
+                                <div class="queue-item">
+                                    <span class="task-name">Code Generation</span>
+                                    <span class="queue-position">Position: 3</span>
+                                </div>
+                                <div class="queue-item">
+                                    <span class="task-name">Test Execution</span>
+                                    <span class="queue-position">Position: 2</span>
+                                </div>
+                                <div class="queue-item">
+                                    <span class="task-name">Deployment</span>
+                                    <span class="queue-position">Position: 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="monitoring.js"></script>
+</body>
+</html> 

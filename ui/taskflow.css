@@ -1,0 +1,83 @@
+.side_bar{
+    width: 240px;
+    height: 644px;
+    max-width: 240px;
+}
+
+.pinwheel_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pinwheel_box_left {
+    display: flex;
+    flex-direction: row;
+}
+.pinwheel_box_left svg {
+    width: 24px;
+    height: 24px;
+}
+.pinwheel_title {
+    color: purple;
+    font-size: small;
+    font-weight: 500;
+    height: 24px;
+    width: 87.75px;
+    letter-spacing: 0%;
+    font-size: 18px;
+    font-style: bold;
+}
+
+.pinwheel_menu_icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 24px;
+    height: 24px;
+}
+
+.title {
+    max-width: 240px;
+}
+
+/*Menu*/
+.menu {
+    margin-top: 10px;
+}
+.menu_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Horizontal alignment (optional) */
+}
+
+.menu_items svg {
+    width: 24px;
+    height: 24px;
+}
+
+.menu_items .home,
+.menu_items .my_tasks,
+.menu_items .notifications {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertical alignment */
+    justify-content: start; /* Horizontal alignment (optional) */
+}
+
+.menu_items .home{
+    background-color: purple;
+    width: 100%;
+    border-radius: 10px;
+    height: 40px;
+    vertical-align: auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    max-width: 240px;
+}
+
+.menu_items .my_tasks_content, .home__content, .notifications__content{
+    margin-left: 10px;
+}
